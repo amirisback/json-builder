@@ -1,0 +1,34 @@
+name: Main CI
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set Up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+
+      # Run Build Project
+      - name: Build gradle project
+        run: ./gradlew build
+
+      # Run Build API
+      - name: Run Build API
+        run: ./gradlew run-build-api
+
+      - name: Sync Repository
+        run: |
+          git config user.name 'amirisback'
+          git config user.email 'faisalamircs@gmail.com'
+          git pull
+          git commit -am "Update Server API"
+          git push
