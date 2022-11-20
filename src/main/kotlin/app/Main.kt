@@ -1,4 +1,4 @@
-import app.JsonBuilder
+package app
 
 fun main(args: Array<String>) {
     JsonBuilder().run()
