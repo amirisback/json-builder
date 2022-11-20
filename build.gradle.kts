@@ -35,5 +35,5 @@ tasks.register ("run-build-api", JavaExec::class.java) {
     description = "Generated API"
     classpath = sourceSets["main"].runtimeClasspath
     // note the addition of "Kt" on the end of the class name.
-    main = "MainKt"
+    main = "app.MainKt"
 }
