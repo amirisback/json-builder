@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Javascript Cross Kotlin</h2>
+
+<p id="demo"></p>
+
+<script>
+
+    async function fetchData() {
+        let response = await fetch('https://amirisback.github.io/front-end-javascript-back-end-kotlin/api/v1/server.json');
+
+        console.log(response.status); // 200
+        console.log(response.statusText); // OK
+
+        if (response.status === 200) {
+            let responseBody = await response.json();
+            document.getElementById("demo").innerHTML = responseBody.data[0].url;
+        }
+    }
+
+    fetchData();
+</script>
+
+</body>
+</html>
