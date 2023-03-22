@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.21"
+    kotlin("jvm") version "1.8.0"
     application
 }
 
-group = "com.frogobox.simplegradlepackages"
-version = "1.0-SNAPSHOT"
+group = "com.frogobox.jsongenerator"
+version = "1.0.0"
 
 application {
     mainClass.set("MainKt")
@@ -19,8 +19,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.code.gson:gson:2.10")
-    testImplementation(kotlin("test"))
+    implementation("com.google.code.gson:gson:2.10.1")
 }
 
 tasks.test {
