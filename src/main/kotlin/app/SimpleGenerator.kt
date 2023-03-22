@@ -1,8 +1,8 @@
 package app
 
-import app.engine.JsonGenerator.createJson
-import app.engine.JsonGenerator.initPathApi
-import app.model.BaseModel
+import app.engine.BaseModel
+import app.engine.JsonArgument
+import app.engine.JsonGenerator
 import app.model.Server
 
 object SimpleGenerator {
@@ -16,8 +16,12 @@ object SimpleGenerator {
         val serverList = listOf(server1, server2)
         val serverModel = BaseModel(serverList)
 
-        initPathApi()
-        createJson("server", serverModel)
+        JsonGenerator.Builder().createJson(
+            argument = JsonArgument(
+                fileName = "server",
+                data = serverModel
+            )
+        )
     }
 
 }

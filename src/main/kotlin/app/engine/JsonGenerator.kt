@@ -4,15 +4,20 @@ import com.google.gson.Gson
 import java.io.File
 import java.io.IOException
 
-object JsonGenerator{
+class JsonGenerator {
 
-    const val PATH_API = "api"
-    const val PATH_V1 = "v1"
-    const val BASE_PATH = "$PATH_API/$PATH_V1"
+    companion object {
+        const val PATH_API = "api"
+        const val PATH_V1 = "v1"
+        const val BASE_PATH = "$PATH_API/$PATH_V1"
 
-    fun initPathApi() {
-        createFolder(PATH_API)
-        createFolder(BASE_PATH)
+        fun Builder(): JsonGenerator {
+            return JsonGenerator().apply {
+                createFolder(PATH_API)
+                createFolder(BASE_PATH)
+            }
+        }
+
     }
 
     fun createFolder(folderName: String) {
@@ -29,16 +34,16 @@ object JsonGenerator{
         }
     }
 
-    fun <T> createJson(fileName: String, data: T) {
+    fun <T> createJson(argument: JsonArgument<T>) {
         try {
-            val jsonFilePath = "$BASE_PATH/$fileName.json"
+            val jsonFilePath = "$BASE_PATH/${argument.fileName}.json"
             val jsonFile = File(jsonFilePath)
             if (jsonFile.exists()) {
                 jsonFile.delete()
                 println("Delete Old File : $jsonFilePath")
             }
             File(jsonFilePath).bufferedWriter().use { out ->
-                val jsonString = Gson().toJson(data)
+                val jsonString = Gson().toJson(argument.data)
                 println("Json Result : $jsonString")
                 out.write(jsonString)
                 println("Success Create : $jsonFilePath")

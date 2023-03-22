@@ -1,5 +1,6 @@
 package app
 
+import app.engine.JsonArgument
 import app.engine.JsonGenerator
 import app.model.Tile
 
@@ -35,8 +36,7 @@ object TileGenerator {
             listTile.add(tileModel)
         }
 
-        JsonGenerator.initPathApi()
-        JsonGenerator.createJson("tiles_fnf", listTile)
+        JsonGenerator.Builder().createJson(JsonArgument("tiles_fnf", listTile))
     }
 
 }
