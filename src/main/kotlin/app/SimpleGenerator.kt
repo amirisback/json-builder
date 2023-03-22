@@ -22,6 +22,7 @@ object SimpleGenerator {
                 data = serverModel
             )
         )
+        println()
     }
 
 }
