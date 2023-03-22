@@ -1,0 +1,42 @@
+[
+  {
+    "id": "animal_01",
+    "name": "Cute White Mouse",
+    "description": "Cute Animal"
+  },
+  {
+    "id": "animal_02",
+    "name": "Cute Animal",
+    "description": "Cute Animal"
+  },
+  {
+    "id": "animal_03",
+    "name": "Cute Cat",
+    "description": "Cute Animal"
+  },
+  {
+    "id": "animal_04",
+    "name": "Cute Bear",
+    "description": "Cute Animal"
+  },
+  {
+    "id": "animal_05",
+    "name": "Cute Panda",
+    "description": "Cute Animal"
+  },
+  {
+    "id": "animal_06",
+    "name": "Cutest Black Cat",
+    "description": "Cute Animal"
+  },
+  {
+    "id": "animal_07",
+    "name": "Cute Pink Cat",
+    "description": "Cute Animal"
+  },
+  {
+    "id": "animal_08",
+    "name": "Cute Yellow Cat",
+    "description": "Cute Animal"
+  }
+]

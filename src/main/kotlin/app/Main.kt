@@ -1,5 +1,6 @@
 package app
 
 fun main(args: Array<String>) {
-    JsonBuilder().run()
+    SimpleGenerator.run()
+    TileGenerator.run()
 }
