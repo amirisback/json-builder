@@ -7,24 +7,28 @@ import app.model.Tile
 object TileGenerator {
     fun run() {
 
+        val param_id = "BACKGROUND"
+        val param_name = "Background Type"
+        val sum_item = 61
+
         val listTile = mutableListOf<Tile>()
 
-        for (i in 0..800) {
+        for (i in 1..sum_item) {
 
             val id = if (i < 10) {
-                "fnf_00$i"
+                "${param_id}_00$i"
             } else if (i < 100) {
-                "fnf_0$i"
+                "${param_id}_0$i"
             } else {
-                "fnf_$i"
+                "${param_id}_$i"
             }
 
             val name = if (i < 10) {
-                "Friday Night Funkin 00$i"
+                "$param_name 00$i"
             } else if (i < 100) {
-                "Friday Night Funkin 0$i"
+                "$param_name 0$i"
             } else {
-                "Friday Night Funkin $i"
+                "$param_name $i"
             }
 
             val tileModel = Tile(
@@ -36,7 +40,7 @@ object TileGenerator {
             listTile.add(tileModel)
         }
 
-        JsonGenerator.Builder().createJson(JsonArgument("tiles_fnf", listTile))
+        JsonGenerator.Builder().createJson(JsonArgument("default_background", listTile))
     }
 
 }
