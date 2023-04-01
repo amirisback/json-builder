@@ -1,6 +1,7 @@
 package app
 
+import app.interpreter.AssetGenerator
+
 fun main(args: Array<String>) {
-    SimpleGenerator.run()
-    TileGenerator.run()
+    AssetGenerator.run()
 }

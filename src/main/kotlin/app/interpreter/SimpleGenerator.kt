@@ -1,4 +1,4 @@
-package app
+package app.interpreter
 
 import app.engine.BaseModel
 import app.engine.JsonArgument
