@@ -9,7 +9,7 @@ object AssetGenerator {
 
     private val ASSET_TYPE = AssetType.DISC
     private const val PARAMS = "Blue Lock"
-    private const val SUM_ITEM = 16
+    private const val SUM_ITEM = 15
 
     fun run() {
 
