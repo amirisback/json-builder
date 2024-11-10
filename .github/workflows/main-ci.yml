@@ -49,4 +49,5 @@ jobs:
           git config user.email 'faisalamircs@gmail.com'
           git pull
           git commit -am "Update Server API"
+          git add *
           git push
