@@ -74,4 +74,4 @@ app/version.properties
 .sonar/
 
 # Json Generated
-api/v1/*.json
+#api/v1/*.json
