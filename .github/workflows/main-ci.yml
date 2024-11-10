@@ -48,7 +48,6 @@ jobs:
           git config user.name 'amirisback'
           git config user.email 'faisalamircs@gmail.com'
           git pull
-          git commit -am "Update Server API"
-          git init
           git add *
+          git commit -am "Update Server API"
           git push
