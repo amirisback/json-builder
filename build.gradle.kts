@@ -1,16 +1,9 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "1.8.0"
-    application
+    kotlin("jvm") version "2.0.21"
 }
 
 group = "com.frogobox.jsongenerator"
 version = "1.0.0"
-
-application {
-    mainClass.set("MainKt")
-}
 
 repositories {
     google()
@@ -26,13 +19,14 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
+kotlin {
+    jvmToolchain(17)
 }
 
 tasks.register ("run-build-api", JavaExec::class.java) {
     description = "Generated API"
     classpath = sourceSets["main"].runtimeClasspath
     // note the addition of "Kt" on the end of the class name.
-    main = "app.MainKt"
+
+    mainClass.set("app.MainKt")
 }
