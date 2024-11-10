@@ -1,7 +1,77 @@
-# Project exclude paths
-/out/
 .gradle
-out
-build
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+/.gradle
+.idea
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+build
+/build
+/captures
+.externalNativeBuild
+
+built application files
+.apk
+.ap_
+
+files for the dex VM
+*.dex
+
+Java class files
+*.class
+
+generated files
+gen/
+.externalNativeBuild/
+
+Local configuration file (sdk path, etc)
+local.properties
+app/version.properties
+
+# SonarQube
+.sonar/
+
+# Json Generated
 api/v1/*.json
